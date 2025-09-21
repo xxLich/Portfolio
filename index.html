@@ -1,0 +1,228 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portfolio – Lisandro Lencina</title>
+    <meta name="description" content="Portfolio." />
+    <link rel="stylesheet" href="/css/Estilos.css">
+</head>
+<body>
+
+    <!-- Header / Nav -->
+    <header>
+        <nav aria-label="Principal">
+            <strong>Lisandro Lencina</strong>
+            <ul>
+                <li><a href="#educacion">Educación</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#tecnologias">Tecnologías</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="inicio" aria-labelledby="hero-title">
+            
+            <div class="hero-container">
+                <div class="hero-foto">
+                    <figure>
+                        <img src="img.jpg" width="160" />
+                    </figure>
+                </div>
+
+                <div class="hero-texto">
+                    <h1 id="hero-title">Lisandro Lencina</h1>
+                    <p>Pasante IT - Estudiante de Sistemas</p>
+                    <p>
+                        Estudiante avanzado de la Tecnicatura Universitaria en Programación (UTN) con experiencia
+                        en soporte técnico, automatización de procesos y desarrollo de aplicaciones low-code.
+                        Me destaco por la capacidad para resolver problemas de forma eficiente, aprender
+                        rápidamente nuevas tecnologías y trabajar en equipo en entornos corporativos.
+                    </p>
+                    <p>
+                        <a href="#proyectos">Ver Proyectos</a> 
+                        <a href="CV_Lisandro_Lencina.pdf" download>Descargar CV</a> 
+                      
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Experiencia y Educación -->
+        <section id="trayectoria" aria-labelledby="trayectoria-title">
+            <h2 id="trayectoria-title">Experiencia y Educación</h2>
+
+            <section aria-labelledby="exp-title">
+                <h3 id="exp-title">Pasante IT – Volvo Construction Equipment (Septiembre 2024 – Actualidad)</h3>
+                <article>
+                    <h4>Soporte técnico y Desarrollador Low Code</h4>
+                    <p>
+                        - Soporte técnico a personal interno (asignación de equipos, reseteo de dispositivos, gestión de perfiles).<br />
+                        - Relevamiento mensual del uso de impresoras.<br />
+                        - Mantenimiento y optimización de una app interna de gestión de almuerzos (Power Apps + SharePoint).<br />
+                        - Desarrollo de una aplicación para control de equipos y automatización de procesos de IT:<br />
+                        • Creación del modelo de datos en SharePoint.<br />
+                        • Desarrollo en Power Apps.<br />
+                        • Automatización de flujos con Power Automate (altas/bajas, asignaciones).
+                    </p>
+                </article>
+            </section>
+
+            <section id="educacion" aria-labelledby="edu-title">
+                <h3 id="edu-title">Educación y Certificaciones</h3>
+                <article>
+                    <h4>Tecnicatura en Programación – UTN FRGP (en curso)</h4>
+                    <p>Cursando segundo año. 18/21 materias aprobadas.</p>
+                </article>
+                <article>
+                    <h4>Certificación en Google Cloud – Talento Tech (En curso)</h4>
+                    <p>
+                        Curso dividido en dos partes: Google Cloud Computing Foundations y Google Cloud Engineer.
+                    </p>
+                </article>
+                <article>
+                    <h4>Introducción a Linux – EducaciónIT (Completo 2025)</h4>
+                    <p>
+                        Manejo de comandos básicos de shell (archivos, directorios, búsquedas).<br />
+                        Administración de usuarios, grupos y permisos (chmod, chown, ACL).<br />
+                        Control y monitoreo de procesos (ps, top, kill, fg/bg).
+                    </p>
+                </article>
+                <article>
+                    <h4>Curso Desarrollo Web – JP Morgan – Fundación Pescar – EducaciónIT (Completo 2022)</h4>
+                    <p>
+                        Fundamentos de HTML, CSS y JavaScript.<br />
+                        Creación de interfaces responsivas y dinámicas.<br />
+                        Proyectos prácticos: landing pages, formularios y aplicaciones interactivas.
+                    </p>
+                </article>
+            </section>
+        </section>
+
+        <!-- Proyectos -->
+        <section id="proyectos" aria-labelledby="projects-title">
+            <h2 id="projects-title">Proyectos</h2>
+            <article aria-labelledby="p1-title">
+                <h3 id="p1-title"> Aplicación de Inventario IT – Power Apps & Power Automate</h3>
+                <p>Desarrollo de aplicación corporativa para la gestión de inventario IT. Incluyó creación de base de datos escalable, automatización de procesos con Power Automate (PDFs, validaciones, flujos iterativos), integración con Microsoft 365 y diseño de interfaz en Power Apps.</p>
+                <ul>
+                    <li>Desarrollé una app corporativa para la gestión de inventario IT (altas, bajas, Modificacion,Scanner de codigos de barra).</li>
+                    <li>Automatización con Power Automate: generación de PDFs y validaciones de datos con Apply to each.</li>
+                    <li>Integración con Microsoft 365 .</li>
+                    <li>Logros: reducción de errores en asignaciones, inventario actualizado y trazable en tiempo real.</li>
+                </ul>
+                <p>
+                    Tecnologías: SharePoint, Power Automate, Power Apps<br />
+                    Enlaces: <a href="" target="_blank" rel="noopener">Video no disponible</a>
+                   
+                </p>
+            </article>
+
+            <article aria-labelledby="p2-title">
+                <h3 id="p2-title">Sistema de Gestión de Clínica Médica</h3>
+                <p>Desarrollé junto a mi equipo un sistema completo para la gestión de una clínica médica con roles diferenciados (administrador y médico).</p>
+                <ul>
+                    <li>Login con usuarios administrador/médico, validación de credenciales y seguridad (contraseñas enmascaradas).</li>
+                    <li>ABML de pacientes y médicos (con asignación de especialidad, horarios y credenciales de acceso).</li>
+                    <li>Asignación de turnos con control de solapamientos (un médico no puede tener dos turnos en el mismo horario).</li>
+                    <li>Informes procesados (ejemplo: porcentaje de ausentes/presentes en un rango de fechas).</li>
+                    <li>Visualización de turnos por parte del médico con búsquedas y filtros, y registro de pacientes presentes/ausentes con observaciones.</li>
+                    <li>Base de datos normalizada (pacientes, médicos, turnos, especialidades, localidades, provincias, usuarios) con vistas, procedimientos almacenados y triggers.</li>
+                    <li>Extras técnicos: programación en tres capas (Datos, Negocio, Presentación), bajas lógicas, validaciones de datos, listados paginados con búsquedas y filtros, mensajes de confirmación y reportes estadísticos.</li>
+                </ul>
+                <p>
+                    Tecnologías: C#, .NET, HTML, CSS, SQL Server<br />
+                    Enlaces: <a href=https://github.com/user52689/PROG-III/tree/main/TP%20Integrador%20Final/TP%20Integrador target="_blank" rel="noopener">GitHub</a>
+                </p>
+            </article>
+
+            <article aria-labelledby="p3-title">
+                <h3 id="p3-title">Proyecto Integrador de Laboratorio 3 – SQL</h3>
+                <p>Sistema de gestión de inventario con base de datos normalizada, lógica en procedimientos almacenados y reportes.</p>
+                <ul>
+                    <li>Tablas normalizadas (Roles, Usuarios, Categorías, Componentes, Proveedores, Ingresos, Ventas, Clientes).</li>
+                    <li>Carga inicial de datos y pruebas funcionales.</li>
+                    <li>Procedimientos almacenados (SPs): registro de ingresos de stock, ABM de usuarios, categorías, componentes, proveedores y empleados.</li>
+                    <li>Vistas: stock disponible, ventas completas, ingresos detallados, usuarios con su rol y resumen de ventas por día.</li>
+                    <li>Triggers: validación de ventas con stock suficiente, actualización automática del estado de los componentes y alertas de stock mínimo.</li>
+                    <li>Optimización del modelo: eliminación de redundancias (subtotal calculable), encriptación de contraseñas de usuarios.</li>
+                    <li>Presentación final: grabación en video con demostración de uso y documentación complementaria.</li>
+                </ul>
+                <p>
+                    Tecnologías: SQL Server · C# .NET (3 capas)<br />
+                    Enlaces: <a href=https://github.com/xxLich/TP_Integrador_Lab3 target="_blank" rel="noopener">GitHub</a> <br />
+                    <a href=https://www.youtube.com/watch?v=6VrrDXVzLUc target="_blank" rel="noopener">Video</a>
+
+                </p>
+            </article>
+
+            <article aria-labelledby="p3-title">
+                <h3 id="p3-title">GalaxyOfUTN – Proyecto Lab2 (C++)</h3>
+                <p>
+                    Desarrollo de un videojuego arcade en C++ con múltiples clases (enemigos, personaje, colisiones, puntuaciones, fondo).
+                    Implementé lógica de juego como proyectiles, menú, vidas, contador de tiempo y puntajes. Se mejoró la estructura del código y la separación de responsabilidades.
+                </p>
+                <ul>
+                    <li>Múltiples módulos y clases con responsabilidades separadas: Personaje, Enemigo, Bala, Colisiones, Bomba, etc.</li>
+                    <li>Módulos utilitarios como contador de tiempo, vidas y eliminaciones.</li>
+                    <li>Gestión del menú y layout: archivos relacionados (menu.cpp, menu.h, .layout).</li>
+                    <li>Recursos de puntuación: módulos archPuntos.cpp / .h.</li>
+                    <li>Elementos visuales de fondo: clases para el escenario.</li>
+                </ul>
+                <p>
+                    Tecnologías: C++, POO, manejo de archivos<br />
+                    Enlaces: <a href= https://github.com/xxLich/GalaxyOfUTN target="_blank" rel="noopener">GitHub</a>
+                </p>
+            </article>
+
+            <article aria-labelledby="p3-title">
+                <h3 id="p3-title">Quinientos – Trabajo Final de Laboratorio 1</h3>
+                <p>
+                    Desarrollo de un proyecto final en C++ como parte de la materia de Laboratorio 1, con algunos componentes en C.
+                </p>
+                <ul>
+                    <li>Implementación de la lógica central en C++ mediante clases y estructuras.</li>
+                    <li>Uso de C en partes específicas para funciones de bajo nivel.</li>
+                    <li>Módulos para almacenamiento y visualización de puntajes (archPuntos.cpp / .h).</li>
+                </ul>
+                <p>
+                    Tecnologías: C++, Programación estructurada y funcional<br />
+                    Enlaces: <a href=https://github.com/xxLich/Quinientos target="_blank" rel="noopener">GitHub</a>
+                </p>
+            </article>
+        </section>
+
+        <!-- Tecnologías -->
+        <section id="tecnologias" aria-labelledby="tech-title">
+            <h2 id="tech-title">Tecnologías</h2>
+            <p>
+                C# · SQL Server · ASP.NET WebForms · PowerApps · Power Automate · Git/GitHub · Linux · HTML · CSS
+            </p>
+        </section>
+
+        <!-- Contacto -->
+        <section id="contacto" aria-labelledby="contact-title">
+            <h2 id="contact-title">Contacto</h2>
+            <ul>
+                <li>Email: <a >lisandrolencina99@gmail.com</a></li>
+                <li>GitHub: <a href="https://github.com/xxLich" target="_blank" rel="noopener">github.com/xxLich</a></li>
+                <li>LinkedIn: <a href="https://www.linkedin.com/in/lisandro-lencina-465798261" target="_blank" rel="noopener">Lisandro Lencina</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>© <span id="year">2025</span> · Lisandro Lencina</p>
+        <a href="#inicio">Volver arriba</a>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

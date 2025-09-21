@@ -1,0 +1,368 @@
+﻿/* ====== Paleta & base ====== */
+:root {
+    --primary: #005288;
+    --accent: #00B0FF;
+    --bg: #F7FAFE;
+    --card: #FFFFFF;
+    --text: #0F172A;
+    --muted: #334155;
+    --line: #E2E8F0;
+    --shadow: 0 10px 30px rgba(15,23,42,.08);
+    --radius: 14px;
+}
+
+* {
+    box-sizing: border-box
+}
+
+html {
+    scroll-behavior: smooth
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", Inter, Roboto, Arial, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    
+}
+
+/* ====== Header / Nav (estilo glass) ====== */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: rgba(247,250,254,.85);
+    backdrop-filter: saturate(180%) blur(8px);
+    border-bottom: 1px solid var(--line);
+}
+
+    header nav {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 12px 16px;
+        display: grid;
+        align-items: center;
+        gap: 16px;
+        grid-template-columns: auto 1fr;
+    }
+
+        header nav strong {
+            font-weight: 800;
+            letter-spacing: .2px
+        }
+
+        header nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            grid-auto-flow: column;
+            justify-content: end;
+            gap: 10px;
+        }
+
+        header nav a {
+            text-decoration: none;
+            color: var(--muted);
+            padding: 8px 12px;
+            border-radius: 10px;
+        }
+
+            header nav a:hover {
+                background: #E8F5FF;
+                color: var(--primary)
+            }
+
+/* ====== Contenedor principal ====== */
+main {
+    max-width: 1100px;
+    margin: 28px auto;
+    padding: 0 16px;
+    display: grid;
+    gap: 24px;
+}
+
+section {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 22px;
+}
+
+
+/* ====== HERO (foto izq | texto der) ====== */
+
+.hero-container {
+    display:flex;
+   align-content: center;
+   align-items:center;
+   justify-content:space-around;
+    
+}
+.hero-foto {
+    display:flex;
+    align-content:center;
+    justify-content:center;
+    flex: 0 0 360px; /* ancho fijo para la foto */
+    width: 50%;
+   
+}
+
+    .hero-foto img { 
+       height: 160px;
+        object-fit: cover;
+        border-radius: 50%;
+        box-shadow: 0 6px 18px rgba(0,0,0,.15);
+    }
+
+.hero-texto p a {
+    text-decoration: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.hero-texto a[href*="#proyectos"] {
+    background: var(--primary);
+    color: #fff;
+}
+
+.hero-texto a[href*="CV"] {
+    border: 1px solid var(--primary);
+    color: var(--primary);
+}
+
+.hero-texto a:hover {
+    filter: brightness(0.95);
+}
+
+@media (max-width: 740px) {
+    .hero-container {
+        display: grid; 
+        grid-template-columns: 1fr; 
+        gap: 20px; 
+        text-align: center; 
+        justify-items: center; 
+    }
+
+
+       
+}
+
+/* ====== Experiencia y Educación (timeline visual) ====== */
+    #trayectoria {
+    display: grid;
+    gap: 20px;
+}
+
+    #trayectoria > h2 {
+        margin: 0;
+        color: var(--primary);
+        font-weight: 800;
+    }
+
+    #trayectoria > section {
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        padding: 0;
+        display: grid;
+        gap: 12px;
+    }
+
+    #trayectoria article {
+        position: relative;
+        background: #fff;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 14px 16px;
+    }
+
+        #trayectoria article::before {
+            content: "";
+            position: absolute;
+            left: -10px;
+            top: 18px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--accent);
+            box-shadow: 0 0 0 4px #E6F7FF;
+        }
+
+    #trayectoria h3 {
+        margin: 0 0 8px
+    }
+
+    #trayectoria h4 {
+        margin: 0 0 8px;
+        color: #0b2540
+    }
+
+    #trayectoria p {
+        margin: 0
+    }
+
+/* En pantallas grandes, dos columnas (experiencia | educación) */
+@media (min-width: 980px) {
+    #trayectoria {
+        grid-template-columns: 0.70fr 1fr;
+        align-items: start; 
+    }
+
+        #trayectoria > h2 {
+            grid-column: 1 / -1
+        }
+}
+
+/* ====== Proyectos (grid 2 columnas como la maqueta) ====== */
+#proyectos {
+    display: grid;
+    gap: 16px;
+}
+
+    #proyectos > h2 {
+        margin: 0;
+        color: var(--primary);
+        font-weight: 800;
+    }
+
+    #proyectos > article {
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        background: #fff;
+        padding: 16px;
+        display: grid;
+        gap: 10px;
+        transition: transform .15s ease, box-shadow .15s ease;
+    }
+
+        #proyectos > article:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 36px rgba(15,23,42,.12);
+        }
+
+    #proyectos h3 {
+        margin: 4px 0 2px
+    }
+
+    #proyectos ul {
+        margin: 0 0 6px 18px
+    }
+
+    #proyectos p {
+        margin: 0
+    }
+
+@media (min-width: 740px) {
+    #proyectos {
+        grid-template-columns: 1fr 1fr;
+    }
+
+        #proyectos > h2 {
+            grid-column: 1 / -1
+        }
+}
+
+/* ====== Tecnologías (chips visuales simples) ====== */
+/* Nota: tu HTML es un <p>; lo mostramos como línea de chips */
+#tecnologias h2 {
+    margin-top: 0;
+    color: var(--primary)
+}
+
+#tecnologias p {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+#tecnologias p {
+    /* Separa por puntos o comas visualmente; sin tocar HTML */
+    /* Truco visual: los puntos median “chips” aunque sea texto plano */
+}
+
+    #tecnologias p::before {
+        content: "";
+    }
+
+#tecnologias p {
+    /* aplicamos estilos de “chip” por bloque */
+    padding: 6px 0;
+}
+
+    #tecnologias p > * { /* sin efecto: no hay spans */
+    }
+
+/* Para dar sensación de chips, envolvemos cada palabra clave con fondo
+   usando 'text-decoration' no alcanza; mejor mantenemos el texto limpio
+   y el resto del UI hace el “look wireframe”. */
+
+/* ====== Contacto ====== */
+#contacto h2 {
+    margin-top: 0;
+    color: var(--primary)
+}
+
+#contacto ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 10px;
+}
+
+#contacto a {
+    color: var(--primary);
+    text-underline-offset: 3px;
+    font-weight: 600;
+}
+
+    #contacto a:hover {
+        color: var(--accent)
+    }
+
+/* ====== Footer ====== */
+footer {
+    max-width: 1100px;
+    margin: 18px auto;
+    padding: 0 16px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    color: var(--muted);
+}
+
+    footer a {
+        color: var(--primary)
+    }
+
+        footer a:hover {
+            color: var(--accent)
+        }
+
+/* ====== Responsivo general ====== */
+@media (max-width: 820px) {
+    header nav {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+        header nav ul {
+            grid-auto-flow: row;
+            justify-content: start;
+            grid-template-columns: repeat(4, auto);
+        }
+
+    #inicio {
+        grid-template-columns: 1fr;
+    }
+}
